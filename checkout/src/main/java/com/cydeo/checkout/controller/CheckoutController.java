@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/checkout")
 public class CheckoutController {
+
     private final ProducerService producerService;
 
     public CheckoutController(ProducerService producerService) {
@@ -22,4 +23,5 @@ public class CheckoutController {
         producerService.sendMessage(checkoutDTO);
         return "message sent";
     }
+
 }
